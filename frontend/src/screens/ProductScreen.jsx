@@ -4,15 +4,26 @@ import { Image, Card, Container, Button, Row, Col, ListGroup } from 'react-boots
 import { useParams, Link } from 'react-router-dom';
 import Rating from '../components/Rating';
 
-import products from '../products';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const ProductScreen = () => {
+    const [product, setProduct] = useState([])
     const params = useParams()
-    const product = products.find(p => (p._id) == params.id)
-    console.log(product)
+
+    useEffect(() => {
+        const fetchProduct = async () => {
+            const { data } = await axios.get(`/api/products/${params.id}`)
+            setProduct(data)
+            console.log("data", data.rating)
+        }
+        fetchProduct()
+    }, [])
+    console.log("prd", product.rating)
+
     return (
         <div>
-            <Link to='/' class='btn btn-dark my-3' variant='dark'>Go Back</Link>
+            <Link to='/' className='btn btn-dark my-3' variant='dark'>Go Back</Link>
             <Row>
                 <Col md={6}>
                     <Image src={product.image} alt={product.name} fluid />

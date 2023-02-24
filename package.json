@@ -1,0 +1,14 @@
+{
+  "name": "abysinnia",
+  "version": "1.0.0",
+  "description": "Abysinnia",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Dagim Ourgie",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
