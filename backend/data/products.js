@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: 1,
     name: 'Full Package',
     image: '/images/cloth1.jpg',
     description:
@@ -13,7 +12,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: 2,
     name: 'Tshirt',
     image: '/images/cloth2.jpg',
     description:
@@ -26,7 +24,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: 3,
     name: 'Jacket',
     image: '/images/cloth3.jpg',
     description:
@@ -39,7 +36,6 @@ const products = [
     numReviews: 6,
   },
   {
-    _id: 4,
     name: 'Pant',
     image: '/images/cloth4.jpg',
     description:
@@ -52,7 +48,6 @@ const products = [
     numReviews: 5,
   },
   {
-    _id: 5,
     name: 'Tshirt',
     image: '/images/cloth5.jpg',
     description:
@@ -65,7 +60,6 @@ const products = [
     numReviews: 0,
   },
   {
-    _id: 6,
     name: 'Suit',
     image: '/images/cloth6.jpg',
     description:
