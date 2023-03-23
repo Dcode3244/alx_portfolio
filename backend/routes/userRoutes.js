@@ -3,10 +3,11 @@ import protect from '../middleware/authMiddleware.js'
 const router = express.Router()
 
 import {
-    authUser, getUserProfile
+    authUser, getUserProfile, registerUser
 } from '../controllers/userControllers.js'
 
 
+router.route('/').post(registerUser)
 router.post('/login', authUser)
 router.route('/profile').get(protect, getUserProfile)
 
